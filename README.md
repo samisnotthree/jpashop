@@ -37,14 +37,14 @@ null 문제에서 안전하다.
 
 
 - 생성메서드란
-서비스에서 new ~~();
-set.
-set.
-하는 행동을 서비스가 아닌 해당 클래스에서 하게 하는 메서드
--> @NoArgsConstructor(access = AccessLevel.PROTECTED)
-혹은
--> protected 생성자
-를 해당 클레스에 만들어서 서비스에서 new ~~(); 하지 못하게한다.
+서비스에서 new ~~();  
+set.  
+set.  
+하는 행동을 서비스가 아닌 해당 클래스에서 하게 하는 메서드  
+-> @NoArgsConstructor(access = AccessLevel.PROTECTED)  
+혹은  
+-> protected 생성자  
+를 해당 클레스에 만들어서 서비스에서 new ~~(); 하지 못하게한다.  
 
 
 
