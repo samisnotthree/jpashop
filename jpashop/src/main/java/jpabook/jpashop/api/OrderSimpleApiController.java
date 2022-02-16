@@ -5,6 +5,7 @@ import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderSearch;
 import jpabook.jpashop.domain.OrderStatus;
 import jpabook.jpashop.repository.OrderRepository;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,12 +47,18 @@ public class OrderSimpleApiController {
      * - 단점: 지연로딩으로 쿼리 N번 호출
      */
     @GetMapping("/api/v2/simple-orders")
-    public List<SimpleOrderDto> ordersV2() {
-        List<Order> orders = orderRepository.findAllByString();
+    public ResultV2 ordersV2() {
+        List<Order> orders = orderRepository.findAllByString(new OrderSearch());
         List<SimpleOrderDto> result = orders.stream()
                 .map(o -> new SimpleOrderDto(o))
                 .collect(Collectors.toList());
-        return result;
+        return new ResultV2(result);
+    }
+
+    @Data
+    @AllArgsConstructor
+    static class ResultV2<T> {
+        private T data;
     }
 
     @Data
