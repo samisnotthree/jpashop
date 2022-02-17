@@ -5,7 +5,7 @@ import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderSearch;
 import jpabook.jpashop.domain.OrderStatus;
 import jpabook.jpashop.repository.OrderRepository;
-import jpabook.jpashop.repository.OrderSimpleQueryRepository;
+import jpabook.jpashop.repository.order.simplequery.OrderSimpleQueryRepository;
 import jpabook.jpashop.repository.order.simplequery.OrderSimpleQueryDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
