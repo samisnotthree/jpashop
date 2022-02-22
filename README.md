@@ -146,3 +146,6 @@ set.
   - JPA에서 DTO를 직접 조회: V4
   - 컬렉션 조회 최적화 - 일대다 관계인 컬렉션은 IN 절을 활용해서 메모리에 미리 조회해서 최적화: V5
   - 플랫 데이터 최적화 - JOIN 결과를 그대로 조회 후 애플리케이션에서 원하는 모양으로 직접 변환: V6
+
+
+![image](https://user-images.githubusercontent.com/85722378/155124133-7cb6d7ec-3dbe-404f-b341-d6899181d317.png)
