@@ -33,7 +33,7 @@ public class OrderServiceTest {
     OrderRepository orderRepository;
 
     @Test
-    public void 상품주문() throws Exception {
+    public void order() throws Exception {
         //Given
         Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
@@ -53,7 +53,7 @@ public class OrderServiceTest {
     }
 
     @Test(expected = NotEnoughStockException.class)
-    public void 상품주문_재고수량초과() throws Exception {
+    public void orderOverQuan() throws Exception {
         //Given
         Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
@@ -65,7 +65,7 @@ public class OrderServiceTest {
     }
 
     @Test
-    public void 주문취소() {
+    public void cancelOrder() {
         //Given
         Member member = createMember();
         Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
